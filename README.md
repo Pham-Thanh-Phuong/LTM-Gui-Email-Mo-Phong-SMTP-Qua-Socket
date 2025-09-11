@@ -28,6 +28,11 @@
 ### [Khoá 16](./docs/projects/K16/README.md)
 
 ## 📝 4. Các bước cài đặt
+## 📞 5. Liên hệ
+- Email: yourmail@example.com  
+- Github: [yourgithub](https://github.com/yourgithub)  
+- Facebook: [yourfacebook](https://facebook.com/yourfacebook)  
+
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
 
