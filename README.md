@@ -33,7 +33,7 @@ Thông qua việc sử dụng Socket trong Java, hệ thống cho phép:<br>
 
 ## 🔧 2. Công nghệ sử dụng: [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
  • Ngôn ngữ lập trình.<br>
- • Thư viện sử dụng: Java Core (Socket, I/O, Collections).<br>
+     • Thư viện sử dụng: Java Core (Socket, I/O, Collections).<br>
  • Mô hình lập trình: Client–Server qua TCP Socket.<br>
  • Eclipse hoặc IntelliJ IDEA.<br>
 ## 🚀 3. Các hình ảnh chức năng
