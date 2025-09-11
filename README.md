@@ -4,7 +4,7 @@
     </a>
 </h2>
 <h2 align="center">
-   NETWORK PROGRAMMING
+   GỬI EMAIL MÔ PHỎNG SMTP QUA SOCKET
 </h2>
 <div align="center">
     <p align="center">
