@@ -18,7 +18,7 @@
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style=for-the-badge)](https://dainam.edu.vn)
 
 </div>
-## 📖 1. Giới thiệu hệ thống <br>
+## 🚀 3. Các hình ảnh chức năng
 Đề tài này nhằm mô phỏng cơ chế hoạt động của SMTP (Simple Mail Transfer Protocol) – giao thức tiêu chuẩn để gửi email trên Internet.<br>
 Thông qua việc sử dụng Socket trong Java, hệ thống cho phép:<br>
  • Một SMTP Server mô phỏng lắng nghe kết nối từ client.<br>
