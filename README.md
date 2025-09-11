@@ -31,11 +31,14 @@ Thông qua việc sử dụng Socket trong Java, hệ thống cho phép:<br>
  • Làm quen với cách triển khai một giao thức ứng dụng thực tế.<br>
 
 ## 🔧 2. Công nghệ sử dụng: [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
- • Ngôn ngữ lập trình: Java (JDK 8+).
- • Thư viện sử dụng: Java Core (Socket, I/O, Collections).
- • Mô hình lập trình: Client–Server qua TCP Socket.
- • IDE khuyến nghị: Eclipse hoặc IntelliJ IDEA.
+ • Ngôn ngữ lập trình.<br>
+ • Thư viện sử dụng: Java Core (Socket, I/O, Collections).<br>
+ • Mô hình lập trình: Client–Server qua TCP Socket.<br>
+ • Eclipse hoặc IntelliJ IDEA.<br>
 ## 🚀 3. Các hình ảnh chức năng
+3.1. Giao tiếp Client ↔ Server (console log)<br>
+ • Client gửi lệnh đến server:<br>
+ <img width="215" height="18" alt="image" src="https://github.com/user-attachments/assets/29ccb955-8d8e-47f0-879a-531219248664" />
 
 ### [Khoá 16](./docs/projects/K16/README.md)
 
