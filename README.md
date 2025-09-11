@@ -19,19 +19,30 @@
 
 </div>
 ## 📖 1. Giới thiệu hệ thống
-Đề tài nhằm tìm hiểu cơ chế hoạt động của giao thức SMTP (Simple Mail Transfer Protocol) – giao thức chuẩn để gửi email trên Internet. Thông qua lập trình Socket, chương trình sẽ mô phỏng quá trình gửi email từ client đến server bằng các lệnh cơ bản của SMTP. Mục tiêu chính là giúp người học nắm rõ cách thức trao đổi dữ liệu khi gửi email, rèn luyện kỹ năng lập trình mạng và hiểu rõ hơn về ứng dụng thực tế của các giao thức truyền thông.
+Đề tài này nhằm mô phỏng cơ chế hoạt động của SMTP (Simple Mail Transfer Protocol) – giao thức tiêu chuẩn để gửi email trên Internet.
+Thông qua việc sử dụng Socket trong Java, hệ thống cho phép:
+ • Một SMTP Server mô phỏng lắng nghe kết nối từ client.
+ • Một SMTP Client kết nối đến server và gửi email bằng các lệnh SMTP cơ bản: HELO, MAIL FROM, RCPT TO, DATA, QUIT.
+ • Server sau khi nhận email sẽ lưu lại vào thư mục mailbox/ dưới dạng file .txt để minh họa quá trình xử lý.
+
+👉 Mục tiêu:
+ • Giúp sinh viên hiểu rõ cơ chế truyền thông giữa client–server trong mô hình SMTP.
+ • Rèn luyện kỹ năng lập trình mạng với TCP Socket trong Java.
+ • Làm quen với cách triển khai một giao thức ứng dụng thực tế.
 
 ## 🔧 2. Công nghệ sử dụng: [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
-
+ • Ngôn ngữ lập trình: Java (JDK 8+).
+ • Thư viện sử dụng: Java Core (Socket, I/O, Collections).
+ • Mô hình lập trình: Client–Server qua TCP Socket.
+ • IDE khuyến nghị: Eclipse hoặc IntelliJ IDEA.
 ## 🚀 3. Các hình ảnh chức năng
 
 ### [Khoá 16](./docs/projects/K16/README.md)
 
 ## 📝 4. Các bước cài đặt
 ## 📞 5. Liên hệ
-- Email: yourmail@example.com  
-- Github: [yourgithub](https://github.com/yourgithub)  
-- Facebook: [yourfacebook](https://facebook.com/yourfacebook)  
+- Email: thankfwong23@gmail.com  
+- SĐT: 0383 609 685 
 
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
