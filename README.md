@@ -22,9 +22,9 @@
 ## 📖 1. Giới thiệu hệ thống <br>
 Đề tài này nhằm mô phỏng cơ chế hoạt động của SMTP (Simple Mail Transfer Protocol) – giao thức tiêu chuẩn để gửi email trên Internet.<br>
 Thông qua việc sử dụng Socket trong Java, hệ thống cho phép:<br>
- &nbsp;• Một SMTP Server mô phỏng lắng nghe kết nối từ client.<br>
+ <p style=" • Một SMTP Server mô phỏng lắng nghe kết nối từ client.<br>
  • Một SMTP Client kết nối đến server và gửi email bằng các lệnh SMTP cơ bản: HELO, MAIL FROM, RCPT TO, DATA, QUIT.<br>
- • Server sau khi nhận email sẽ lưu lại vào thư mục mailbox/ dưới dạng file .txt để minh họa quá trình xử lý.<br>
+ • Server sau khi nhận email sẽ lưu lại vào thư mục mailbox/ dưới dạng file .txt để minh họa quá trình xử lý.><br>
 
 👉 Mục tiêu:<br>
  • Giúp sinh viên hiểu rõ cơ chế truyền thông giữa client–server trong mô hình SMTP.<br>
