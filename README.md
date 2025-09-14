@@ -31,7 +31,7 @@ Người dùng nhập thông tin email qua giao diện Swing, client gửi lện
 
 ⸻
 
-2. Công nghệ sử dụng
+## 🔧 2. Công nghệ sử dụng
  • Ngôn ngữ: Java (JDK 8+)
  • Mô hình: Client–Server qua TCP Socket
  • Thư viện: Java Core (Socket, ServerSocket, I/O)
