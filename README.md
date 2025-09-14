@@ -163,6 +163,124 @@ Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo ch
 
 <img width="615" height="260" alt="image" src="https://github.com/user-attachments/assets/67b3e0dc-930f-4542-a42d-8186527356c1" />
 
+3.2. Email được lưu trên Server
+
+Sau khi client gửi email thành công, Server sẽ tự động tạo thư mục mailbox/ (nếu chưa tồn tại) và lưu toàn bộ nội dung email thành file .txt.
+
+ • File được tạo:
+ 
+ <img width="240" height="148" alt="image" src="https://github.com/user-attachments/assets/80e5ce83-27a8-44dc-abf6-c58f8925d248" />
+
+ • Nội dung file email:
+
+ <img width="387" height="164" alt="image" src="https://github.com/user-attachments/assets/0ca875b3-42c7-4229-8351-7e1c41438110" />
+
+ 3.3. Kiến trúc hệ thống
+
+Hệ thống được xây dựng theo kiến trúc Client–Server qua TCP Socket, cụ thể:
+
+[SMTP Client] <--TCP Socket--> [SMTP Server] --> [Mailbox Saver -> File .txt]
+
+• SMTP Client: Ứng dụng Java có giao diện, cho phép nhập người nhận và nội dung email.
+
+• SMTP Server: Chạy nền, lắng nghe trên cổng 2525, xử lý lệnh từ client.
+
+• Mailbox Saver: Chức năng lưu trữ email vào thư mục mailbox/ dưới dạng file văn bản .txt.
+
+📖 4. Các bước cài đặt
+
+Phần này mô tả các bước chuẩn bị, cài đặt môi trường và chạy thử hệ thống SMTP mô phỏng bằng Java. Toàn bộ các bước đều có thể thực hiện trên một máy tính cá nhân mà không cần Internet, vì chương trình chỉ chạy trong mạng cục bộ (localhost).
+
+⸻
+
+4.1. Chuẩn bị môi trường
+
+Trước khi chạy hệ thống, cần chuẩn bị:
+
+ 1. Cài đặt JDK (Java Development Kit)
+    
+ • Phiên bản khuyến nghị: JDK 8 trở lên
+ 
+ • Kiểm tra bằng lệnh:
+
+ java -version
+
+2. Cài đặt IDE để lập trình và chạy chương trình
+   
+ • Có thể sử dụng Eclipse IDE, IntelliJ IDEA hoặc NetBeans.
+ 
+ • Trong đề tài này, IDE phổ biến nhất là Eclipse.
+ 
+3. Cấu trúc thư mục project
+    
+Sau khi tạo project Java trong Eclipse, sắp xếp các file theo cấu trúc:
+
+<img width="231" height="275" alt="image" src="https://github.com/user-attachments/assets/3f0075dd-6231-4601-b568-2e8f2e5e89a3" />
+
+4.2. Chạy chương trình
+
+4.2.1. Chạy Server
+
+ 1. Mở file SmtpServer.java trong Eclipse.
+    
+ 2. Chọn Run As → Java Application.
+    
+ 3. Console của Eclipse hiển thị thông báo:
+
+<img width="455" height="59" alt="image" src="https://github.com/user-attachments/assets/1435de41-91fd-407e-91b5-7ab6effe72d2" />
+
+4.2.2. Chạy Client
+
+ 1. Mở file SmtpClientUI.java trong Eclipse.
+    
+ 2. Chọn Run As → Java Application.
+    
+ 3. Giao diện ứng dụng hiển thị cửa sổ với:
+    
+ • Ô nhập người nhận.
+ 
+ • Ô nhập nội dung email.
+ 
+ • Nút ✉ Gửi Email.
+
+Khi người dùng bấm nút gửi, client sẽ:
+
+ • Tạo kết nối TCP đến server (cổng 2525).
+ 
+ • Gửi lệnh SMTP: HELO, MAIL FROM, RCPT TO, DATA.
+ 
+ • Gửi nội dung email.
+ 
+ • Kết thúc bằng dấu "." theo chuẩn SMTP.
+ 
+ • Đóng kết nối bằng lệnh QUIT.
+
+4.2.3. Kiểm tra kết quả
+
+ 1. Sau khi email được gửi thành công, server sẽ tự động tạo thư mục mailbox/ (nếu chưa có).
+    
+ 2. Mỗi email sẽ được lưu thành một file .txt với tên theo thời gian, ví dụ:
+
+<img width="197" height="32" alt="image" src="https://github.com/user-attachments/assets/321c6abe-641d-426b-b984-b008b41b45b1" />
+
+3. Nội dung file email bao gồm:
+   
+ • Người gửi
+ 
+ • Người nhận
+ 
+ • Chủ đề
+ 
+ • Thời gian
+ 
+ • Nội dung email
+
+Ví dụ:
+
+<p align="center"> <img width="393" height="108" alt="image" src="https://github.com/user-attachments/assets/bdfdc47c-27ff-470a-8205-51154ec6ebda" /> </p>
+
+
+
 
 ## 📞 5. Liên hệ
 - Email: thankfwong23@gmail.com  
