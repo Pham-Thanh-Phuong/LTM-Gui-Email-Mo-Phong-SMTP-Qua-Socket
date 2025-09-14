@@ -42,13 +42,13 @@ Trong quá trình xây dựng hệ thống mô phỏng gửi email qua giao th�
 
 Trong đề tài này, Java được lựa chọn vì:
 
- • Hỗ trợ mạnh mẽ các thư viện Socket, cho phép lập trình mạng dễ dàng.
- 
- • Có API I/O (Input/Output) phong phú để đọc/ghi dữ liệu từ client và server.
- 
- • Cộng đồng lớn, nhiều tài liệu tham khảo.
- 
- • Khả năng chạy ổn định trên nhiều hệ điều hành (Windows, Linux, macOS).
+     • Hỗ trợ mạnh mẽ các thư viện Socket, cho phép lập trình mạng dễ dàng.
+     
+     • Có API I/O (Input/Output) phong phú để đọc/ghi dữ liệu từ client và server.
+     
+     • Cộng đồng lớn, nhiều tài liệu tham khảo.
+     
+     • Khả năng chạy ổn định trên nhiều hệ điều hành (Windows, Linux, macOS).
 
 Java giúp việc xây dựng mô hình Client – Server trở nên trực quan, dễ hiểu, đồng thời đảm bảo chương trình có thể tái sử dụng và mở rộng.
 
@@ -85,27 +85,27 @@ Việc sử dụng TCP Socket đảm bảo:
 
 Trong ứng dụng mạng, dữ liệu trao đổi đều ở dạng chuỗi ký tự. Java cung cấp hệ thống I/O Streams mạnh mẽ để xử lý:
 
- • InputStreamReader + BufferedReader: đọc dữ liệu từ client.
- 
- • OutputStreamWriter + BufferedWriter: gửi dữ liệu từ server đến client.
- 
- • FileWriter + BufferedWriter: ghi nội dung email xuống file .txt.
+     • InputStreamReader + BufferedReader: đọc dữ liệu từ client.
+     
+     • OutputStreamWriter + BufferedWriter: gửi dữ liệu từ server đến client.
+     
+     • FileWriter + BufferedWriter: ghi nội dung email xuống file .txt.
 
 Ưu điểm khi dùng I/O trong Java:
 
- • Dễ dàng thao tác với dữ liệu dạng text.
- 
- • Hỗ trợ buffer (bộ đệm), giúp tăng tốc độ xử lý.
- 
- • Có thể kết hợp nhiều lớp I/O để đạt hiệu suất và tính linh hoạt. 
- 
+     • Dễ dàng thao tác với dữ liệu dạng text.
+     
+     • Hỗ trợ buffer (bộ đệm), giúp tăng tốc độ xử lý.
+     
+     • Có thể kết hợp nhiều lớp I/O để đạt hiệu suất và tính linh hoạt. 
+     
 Trong hệ thống SMTP mô phỏng, I/O đóng vai trò quan trọng để:
 
- 1. Gửi lệnh từ client đến server.
-    
- 2. Nhận phản hồi từ server.
-    
- 3. Lưu email thành file trong thư mục mailbox/.
+     1. Gửi lệnh từ client đến server.
+        
+     2. Nhận phản hồi từ server.
+        
+     3. Lưu email thành file trong thư mục mailbox/.
 
 ⸻
 
@@ -113,17 +113,17 @@ Trong hệ thống SMTP mô phỏng, I/O đóng vai trò quan trọng để:
 
 Mô hình Client – Server là kiến trúc phổ biến trong lập trình mạng.
 
- • Client: Gửi yêu cầu (request).
- 
- • Server: Xử lý yêu cầu và trả về phản hồi (response).
+     • Client: Gửi yêu cầu (request).
+     
+     • Server: Xử lý yêu cầu và trả về phản hồi (response).
 
 Trong bài toán này:
 
- • Client đóng vai trò phần mềm gửi email.
- 
- • Server đóng vai trò máy chủ SMTP giả lập.
- 
- • Sau khi nhận đủ dữ liệu, server sẽ lưu email thành file để thay cho việc gửi ra Internet.
+     • Client đóng vai trò phần mềm gửi email.
+     
+     • Server đóng vai trò máy chủ SMTP giả lập.
+     
+     • Sau khi nhận đủ dữ liệu, server sẽ lưu email thành file để thay cho việc gửi ra Internet.
 
 Việc sử dụng mô hình Client – Server giúp hệ thống dễ dàng mô phỏng cách mà các phần mềm email (Outlook, Gmail, Thunderbird…) giao tiếp với máy chủ SMTP thật ngoài Internet.
 
@@ -133,17 +133,17 @@ Việc sử dụng mô hình Client – Server giúp hệ thống dễ dàng mô
 
 Để lập trình và chạy ứng dụng, nhóm sử dụng IDE (Integrated Development Environment):
 
- • Eclipse: miễn phí, phổ biến trong cộng đồng Java.
- 
- • IntelliJ IDEA: giao diện hiện đại, hỗ trợ tính năng thông minh (code completion, debug).
+     • Eclipse: miễn phí, phổ biến trong cộng đồng Java.
+     
+     • IntelliJ IDEA: giao diện hiện đại, hỗ trợ tính năng thông minh (code completion, debug).
 
 Lợi ích của việc dùng IDE:
 
- • Quản lý project dễ dàng.
- 
- • Hỗ trợ chạy và debug nhanh.
- 
- • Tích hợp console để quan sát log giao tiếp Client – Server.
+     • Quản lý project dễ dàng.
+     
+     • Hỗ trợ chạy và debug nhanh.
+     
+     • Tích hợp console để quan sát log giao tiếp Client – Server.
 
  ## 📖 3. Các hình ảnh chức năng
 
@@ -179,37 +179,37 @@ Sau khi client gửi email thành công, Server sẽ tự động tạo thư m�
 
 Hệ thống được xây dựng theo kiến trúc Client–Server qua TCP Socket, cụ thể:
 
-[SMTP Client] <--TCP Socket--> [SMTP Server] --> [Mailbox Saver -> File .txt]
-
-• SMTP Client: Ứng dụng Java có giao diện, cho phép nhập người nhận và nội dung email.
-
-• SMTP Server: Chạy nền, lắng nghe trên cổng 2525, xử lý lệnh từ client.
-
-• Mailbox Saver: Chức năng lưu trữ email vào thư mục mailbox/ dưới dạng file văn bản .txt.
+    [SMTP Client] <--TCP Socket--> [SMTP Server] --> [Mailbox Saver -> File .txt]
+    
+    • SMTP Client: Ứng dụng Java có giao diện, cho phép nhập người nhận và nội dung email.
+    
+    • SMTP Server: Chạy nền, lắng nghe trên cổng 2525, xử lý lệnh từ client.
+    
+    • Mailbox Saver: Chức năng lưu trữ email vào thư mục mailbox/ dưới dạng file văn bản .txt.
 
 ## 📖 4. Các bước cài đặt
 
-Phần này mô tả các bước chuẩn bị, cài đặt môi trường và chạy thử hệ thống SMTP mô phỏng bằng Java. Toàn bộ các bước đều có thể thực hiện trên một máy tính cá nhân mà không cần Internet, vì chương trình chỉ chạy trong mạng cục bộ (localhost).
+    Phần này mô tả các bước chuẩn bị, cài đặt môi trường và chạy thử hệ thống SMTP mô phỏng bằng Java. Toàn bộ các bước đều có thể thực hiện trên một máy tính cá nhân mà không cần Internet, vì chương trình chỉ chạy trong mạng cục bộ (localhost).
 
 ⸻
 
 4.1. Chuẩn bị môi trường
 
-Trước khi chạy hệ thống, cần chuẩn bị:
-
- 1. Cài đặt JDK (Java Development Kit)
+    Trước khi chạy hệ thống, cần chuẩn bị:
     
- • Phiên bản khuyến nghị: JDK 8 trở lên
- 
- • Kiểm tra bằng lệnh:
+1. Cài đặt JDK (Java Development Kit)
+        
+     • Phiên bản khuyến nghị: JDK 8 trở lên
+     
+     • Kiểm tra bằng lệnh:
 
-     java -version
+        java -version
 
 2. Cài đặt IDE để lập trình và chạy chương trình
    
- • Có thể sử dụng Eclipse IDE, IntelliJ IDEA hoặc NetBeans.
- 
- • Trong đề tài này, IDE phổ biến nhất là Eclipse.
+         • Có thể sử dụng Eclipse IDE, IntelliJ IDEA hoặc NetBeans.
+         
+         • Trong đề tài này, IDE phổ biến nhất là Eclipse.
  
 3. Cấu trúc thư mục project
     
@@ -237,23 +237,23 @@ Sau khi tạo project Java trong Eclipse, sắp xếp các file theo cấu trúc
     
  3. Giao diện ứng dụng hiển thị cửa sổ với:
     
- • Ô nhập người nhận.
- 
- • Ô nhập nội dung email.
+         • Ô nhập người nhận.
+         
+         • Ô nhập nội dung email.
  
  • Nút ✉ Gửi Email.
 
 Khi người dùng bấm nút gửi, client sẽ:
 
- • Tạo kết nối TCP đến server (cổng 2525).
- 
- • Gửi lệnh SMTP: HELO, MAIL FROM, RCPT TO, DATA.
- 
- • Gửi nội dung email.
- 
- • Kết thúc bằng dấu "." theo chuẩn SMTP.
- 
- • Đóng kết nối bằng lệnh QUIT.
+     • Tạo kết nối TCP đến server (cổng 2525).
+     
+     • Gửi lệnh SMTP: HELO, MAIL FROM, RCPT TO, DATA.
+     
+     • Gửi nội dung email.
+     
+     • Kết thúc bằng dấu "." theo chuẩn SMTP.
+     
+     • Đóng kết nối bằng lệnh QUIT.
 
 4.2.3. Kiểm tra kết quả
 
@@ -265,15 +265,15 @@ Khi người dùng bấm nút gửi, client sẽ:
 
 3. Nội dung file email bao gồm:
    
- • Người gửi
- 
- • Người nhận
- 
- • Chủ đề
- 
- • Thời gian
- 
- • Nội dung email
+         • Người gửi
+         
+         • Người nhận
+         
+         • Chủ đề
+         
+         • Thời gian
+         
+         • Nội dung email
 
 Ví dụ:
 
