@@ -29,19 +29,121 @@ Hệ thống mô phỏng quá trình gửi email qua giao thức SMTP (Simple Ma
 Người dùng nhập thông tin email qua giao diện Swing, client gửi lệnh SMTP qua TCP socket đến server, server sẽ lưu email thành file .txt trong thư mục mailbox/.
 
 
+
+📌 2. Công nghệ sử dụng
+
+Trong quá trình xây dựng hệ thống mô phỏng gửi email qua giao thức SMTP bằng Socket, nhóm sử dụng các công nghệ chính sau:
+
 ⸻
 
-## 🔧 2. Công nghệ sử dụng
-Ngôn ngữ: Java (JDK 8+)
+2.1. Ngôn ngữ lập trình Java
 
-Mô hình: Client–Server qua TCP Socket
+Java là một ngôn ngữ lập trình hướng đối tượng, đa nền tảng, được phát triển bởi Sun Microsystems (nay thuộc Oracle). Java nổi bật nhờ nguyên lý “Write Once, Run Anywhere”, tức là chương trình viết một lần có thể chạy trên nhiều hệ điều hành khác nhau nhờ Java Virtual Machine (JVM).
 
-Thư viện: Java Core (Socket, ServerSocket, I/O)
+Trong đề tài này, Java được lựa chọn vì:
 
-Giao diện: Java Swing
+ • Hỗ trợ mạnh mẽ các thư viện Socket, cho phép lập trình mạng dễ dàng.
+ 
+ • Có API I/O (Input/Output) phong phú để đọc/ghi dữ liệu từ client và server.
+ 
+ • Cộng đồng lớn, nhiều tài liệu tham khảo.
+ 
+ • Khả năng chạy ổn định trên nhiều hệ điều hành (Windows, Linux, macOS).
 
-IDE: Eclipse hoặc IntelliJ IDEA
+Java giúp việc xây dựng mô hình Client – Server trở nên trực quan, dễ hiểu, đồng thời đảm bảo chương trình có thể tái sử dụng và mở rộng.
 
+⸻
+
+2.2. Socket trong Java
+
+Socket là điểm cuối (endpoint) trong quá trình giao tiếp giữa hai tiến trình qua mạng. Trong Java, gói java.net cung cấp các lớp quan trọng:
+
+ • ServerSocket: Dùng để tạo máy chủ, lắng nghe yêu cầu từ client.
+ 
+ • Socket: Dùng để tạo kết nối từ phía client đến server.
+ 
+ • Các phương thức đọc/ghi (InputStream, OutputStream) cho phép trao đổi dữ liệu qua kết nối.
+
+Trong hệ thống này:
+
+ • Server mở cổng 2525, chờ client kết nối.
+ 
+ • Client kết nối qua Socket và gửi các lệnh theo chuẩn SMTP (HELO, MAIL FROM, RCPT TO, DATA…).
+ 
+ • Server phản hồi bằng các mã trạng thái (220, 250, 354, 221…) như một máy chủ SMTP thực tế.
+
+Việc sử dụng TCP Socket đảm bảo:
+
+ • Kết nối tin cậy: Dữ liệu gửi đi không bị mất hoặc sai thứ tự.
+ 
+ • Giao tiếp hai chiều: Client có thể gửi lệnh, server phản hồi ngay lập tức.
+ 
+ • Đồng bộ hóa: Thích hợp cho mô phỏng giao thức SMTP vốn cần phản hồi tuần tự.
+
+
+2.3. Java I/O (Input/Output)
+
+Trong ứng dụng mạng, dữ liệu trao đổi đều ở dạng chuỗi ký tự. Java cung cấp hệ thống I/O Streams mạnh mẽ để xử lý:
+
+ • InputStreamReader + BufferedReader: đọc dữ liệu từ client.
+ 
+ • OutputStreamWriter + BufferedWriter: gửi dữ liệu từ server đến client.
+ 
+ • FileWriter + BufferedWriter: ghi nội dung email xuống file .txt.
+
+Ưu điểm khi dùng I/O trong Java:
+
+ • Dễ dàng thao tác với dữ liệu dạng text.
+ 
+ • Hỗ trợ buffer (bộ đệm), giúp tăng tốc độ xử lý.
+ 
+ • Có thể kết hợp nhiều lớp I/O để đạt hiệu suất và tính linh hoạt. 
+ 
+Trong hệ thống SMTP mô phỏng, I/O đóng vai trò quan trọng để:
+
+ 1. Gửi lệnh từ client đến server.
+ 2. 
+ 3. Nhận phản hồi từ server.
+ 4. 
+ 5. Lưu email thành file trong thư mục mailbox/.
+
+⸻
+
+2.4. Mô hình Client – Server
+
+Mô hình Client – Server là kiến trúc phổ biến trong lập trình mạng.
+
+ • Client: Gửi yêu cầu (request).
+ 
+ • Server: Xử lý yêu cầu và trả về phản hồi (response).
+
+Trong bài toán này:
+
+ • Client đóng vai trò phần mềm gửi email.
+ 
+ • Server đóng vai trò máy chủ SMTP giả lập.
+ 
+ • Sau khi nhận đủ dữ liệu, server sẽ lưu email thành file để thay cho việc gửi ra Internet.
+
+Việc sử dụng mô hình Client – Server giúp hệ thống dễ dàng mô phỏng cách mà các phần mềm email (Outlook, Gmail, Thunderbird…) giao tiếp với máy chủ SMTP thật ngoài Internet.
+
+⸻
+
+2.5. IDE: Eclipse / IntelliJ IDEA
+
+Để lập trình và chạy ứng dụng, nhóm sử dụng IDE (Integrated Development Environment):
+
+ • Eclipse: miễn phí, phổ biến trong cộng đồng Java.
+ 
+ • IntelliJ IDEA: giao diện hiện đại, hỗ trợ tính năng thông minh (code completion, debug).
+
+Lợi ích của việc dùng IDE:
+
+ • Quản lý project dễ dàng.
+ 
+ • Hỗ trợ chạy và debug nhanh.
+ 
+ • Tích hợp console để quan sát log giao tiếp Client – Server.
 
 ## 📞 5. Liên hệ
 - Email: thankfwong23@gmail.com  
