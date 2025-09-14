@@ -284,7 +284,7 @@ Ví dụ:
 
 ## 📞 5. Liên hệ
 - 📧 Email: thankfwong23@gmail.com  
-- 📞 SĐT: 0383 609 685 
+- ☎️ SĐT: 0383 609 685 
 
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
