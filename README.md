@@ -20,7 +20,7 @@
 </div>
 
 
-📖 1. Giới thiệu
+## 📖 1. Giới thiệu
 
 Đề tài: Mô phỏng gửi email qua SMTP bằng Socket (Java)
 
