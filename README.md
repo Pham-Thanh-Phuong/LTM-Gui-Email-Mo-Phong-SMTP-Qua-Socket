@@ -38,7 +38,7 @@ Trong quá trình xây dựng hệ thống mô phỏng gửi email qua giao th�
 
 2.1. Ngôn ngữ lập trình Java
 
-Java là một ngôn ngữ lập trình hướng đối tượng, đa nền tảng, được phát triển bởi Sun Microsystems (nay thuộc Oracle). Java nổi bật nhờ nguyên lý “Write Once, Run Anywhere”, tức là chương trình viết một lần có thể chạy trên nhiều hệ điều hành khác nhau nhờ Java Virtual Machine (JVM).
+    Java là một ngôn ngữ lập trình hướng đối tượng, đa nền tảng, được phát triển bởi Sun Microsystems (nay thuộc Oracle). Java nổi bật nhờ nguyên lý “Write Once, Run Anywhere”, tức là chương trình viết một lần có thể chạy trên nhiều hệ điều hành khác nhau nhờ Java Virtual Machine (JVM).
 
 Trong đề tài này, Java được lựa chọn vì:
 
@@ -58,27 +58,27 @@ Java giúp việc xây dựng mô hình Client – Server trở nên trực quan
 
 Socket là điểm cuối (endpoint) trong quá trình giao tiếp giữa hai tiến trình qua mạng. Trong Java, gói java.net cung cấp các lớp quan trọng:
 
- • ServerSocket: Dùng để tạo máy chủ, lắng nghe yêu cầu từ client.
- 
- • Socket: Dùng để tạo kết nối từ phía client đến server.
- 
- • Các phương thức đọc/ghi (InputStream, OutputStream) cho phép trao đổi dữ liệu qua kết nối.
+     • ServerSocket: Dùng để tạo máy chủ, lắng nghe yêu cầu từ client.
+     
+     • Socket: Dùng để tạo kết nối từ phía client đến server.
+     
+     • Các phương thức đọc/ghi (InputStream, OutputStream) cho phép trao đổi dữ liệu qua kết nối.
 
 Trong hệ thống này:
 
- • Server mở cổng 2525, chờ client kết nối.
- 
- • Client kết nối qua Socket và gửi các lệnh theo chuẩn SMTP (HELO, MAIL FROM, RCPT TO, DATA…).
- 
- • Server phản hồi bằng các mã trạng thái (220, 250, 354, 221…) như một máy chủ SMTP thực tế.
+     • Server mở cổng 2525, chờ client kết nối.
+     
+     • Client kết nối qua Socket và gửi các lệnh theo chuẩn SMTP (HELO, MAIL FROM, RCPT TO, DATA…).
+     
+     • Server phản hồi bằng các mã trạng thái (220, 250, 354, 221…) như một máy chủ SMTP thực tế.
 
 Việc sử dụng TCP Socket đảm bảo:
 
- • Kết nối tin cậy: Dữ liệu gửi đi không bị mất hoặc sai thứ tự.
- 
- • Giao tiếp hai chiều: Client có thể gửi lệnh, server phản hồi ngay lập tức.
- 
- • Đồng bộ hóa: Thích hợp cho mô phỏng giao thức SMTP vốn cần phản hồi tuần tự.
+     • Kết nối tin cậy: Dữ liệu gửi đi không bị mất hoặc sai thứ tự.
+     
+     • Giao tiếp hai chiều: Client có thể gửi lệnh, server phản hồi ngay lập tức.
+     
+     • Đồng bộ hóa: Thích hợp cho mô phỏng giao thức SMTP vốn cần phản hồi tuần tự.
 
 
 2.3. Java I/O (Input/Output)
@@ -153,13 +153,13 @@ Trong phần này, hệ thống được minh họa bằng các hình ảnh ch�
 
 3.1. Giao tiếp Client ↔ Server (Console log)
 
-    Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo chuẩn SMTP đến Server thông qua kết nối TCP Socket. Đồng thời, Server sẽ phản hồi bằng các mã trạng thái.
+Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo chuẩn SMTP đến Server thông qua kết nối TCP Socket. Đồng thời, Server sẽ phản hồi bằng các mã trạng thái.
 
-     • Console phía Client hiển thị:
+• Console phía Client hiển thị:
  
 <p align="center"> <img width="484" height="139" alt="image" src="https://github.com/user-attachments/assets/45cff8fa-91a3-466c-9e13-0087313ee716" /> </p>
 
-    • Console phía Server hiển thị:
+• Console phía Server hiển thị:
 
 <p align="center"> <img width="615" height="260" alt="image" src="https://github.com/user-attachments/assets/67b3e0dc-930f-4542-a42d-8186527356c1" /> </p>
 
@@ -203,7 +203,7 @@ Trước khi chạy hệ thống, cần chuẩn bị:
  
  • Kiểm tra bằng lệnh:
 
- java -version
+     java -version
 
 2. Cài đặt IDE để lập trình và chạy chương trình
    
