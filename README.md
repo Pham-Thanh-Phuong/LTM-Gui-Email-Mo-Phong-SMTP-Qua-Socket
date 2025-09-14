@@ -27,16 +27,15 @@
 Hệ thống mô phỏng quá trình gửi email qua giao thức SMTP (Simple Mail Transfer Protocol).
 Người dùng nhập thông tin email qua giao diện Swing, client gửi lệnh SMTP qua TCP socket đến server, server sẽ lưu email thành file .txt trong thư mục mailbox/.
 
-👉 Đây là bản demo học thuật, không gửi mail thật ra Internet.
 
 ⸻
 
 ## 🔧 2. Công nghệ sử dụng
- • Ngôn ngữ: Java (JDK 8+)
- • Mô hình: Client–Server qua TCP Socket
- • Thư viện: Java Core (Socket, ServerSocket, I/O)
- • Giao diện: Java Swing
- • IDE: Eclipse hoặc IntelliJ IDEA
+Ngôn ngữ: Java (JDK 8+)
+Mô hình: Client–Server qua TCP Socket
+Thư viện: Java Core (Socket, ServerSocket, I/O)
+Giao diện: Java Swing
+IDE: Eclipse hoặc IntelliJ IDEA
 
 
 ## 📞 5. Liên hệ
