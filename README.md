@@ -22,17 +22,15 @@
 
 ## 📖 1. Giới thiệu
 
-Đề tài: Mô phỏng gửi email qua SMTP bằng Socket (Java)
-
-Hệ thống mô phỏng quá trình gửi email qua giao thức SMTP (Simple Mail Transfer Protocol).
-
-Người dùng nhập thông tin email qua giao diện Swing, client gửi lệnh SMTP qua TCP socket đến server, server sẽ lưu email thành file .txt trong thư mục mailbox/.
+- Đề tài: Mô phỏng gửi email qua SMTP bằng Socket 
+- Hệ thống mô phỏng quá trình gửi email qua giao thức SMTP (Simple Mail Transfer Protocol)
+- Người dùng nhập thông tin email qua giao diện Swing, client gửi lệnh SMTP qua TCP socket đến server, server sẽ lưu email thành file .txt trong thư mục mailbox/.
 
 
 
 ## 📌 2. Công nghệ sử dụng
 
-Trong quá trình xây dựng hệ thống mô phỏng gửi email qua giao thức SMTP bằng Socket, nhóm sử dụng các công nghệ chính sau:
+- Trong quá trình xây dựng hệ thống mô phỏng gửi email qua giao thức SMTP bằng Socket, nhóm sử dụng các công nghệ chính sau:
 
 ⸻
 
@@ -153,7 +151,7 @@ Trong phần này, hệ thống được minh họa bằng các hình ảnh ch�
 
 3.1. Giao tiếp Client ↔ Server (Console log)
 
-Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo chuẩn SMTP đến Server thông qua kết nối TCP Socket. Đồng thời, Server sẽ phản hồi bằng các mã trạng thái.
+- Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo chuẩn SMTP đến Server thông qua kết nối TCP Socket. Đồng thời, Server sẽ phản hồi bằng các mã trạng thái.
 
 • Console phía Client hiển thị:
  
@@ -166,7 +164,7 @@ Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo ch
 <p align="center"><i>Hình ảnh 2</i></p>
 3.2. Email được lưu trên Server
 
-Sau khi client gửi email thành công, Server sẽ tự động tạo thư mục mailbox/ (nếu chưa tồn tại) và lưu toàn bộ nội dung email thành file .txt.
+- Sau khi client gửi email thành công, Server sẽ tự động tạo thư mục mailbox/ (nếu chưa tồn tại) và lưu toàn bộ nội dung email thành file .txt.
 
  • File được tạo:
  
@@ -214,7 +212,7 @@ Hệ thống được xây dựng theo kiến trúc Client–Server qua TCP Sock
  
 3. Cấu trúc thư mục project
     
-Sau khi tạo project Java trong Eclipse, sắp xếp các file theo cấu trúc:
+- Sau khi tạo project Java trong Eclipse, sắp xếp các file theo cấu trúc:
 
 <p align="center"> <img width="231" height="275" alt="image" src="https://github.com/user-attachments/assets/3f0075dd-6231-4601-b568-2e8f2e5e89a3" /> </p>
 <p align="center"><i>Hình ảnh 5</i></p>
