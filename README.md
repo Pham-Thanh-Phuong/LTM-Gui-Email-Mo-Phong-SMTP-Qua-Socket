@@ -153,13 +153,13 @@ Trong phần này, hệ thống được minh họa bằng các hình ảnh ch�
 
 3.1. Giao tiếp Client ↔ Server (Console log)
 
-Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo chuẩn SMTP đến Server thông qua kết nối TCP Socket. Đồng thời, Server sẽ phản hồi bằng các mã trạng thái.
+    Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo chuẩn SMTP đến Server thông qua kết nối TCP Socket. Đồng thời, Server sẽ phản hồi bằng các mã trạng thái.
 
- • Console phía Client hiển thị:
+     • Console phía Client hiển thị:
  
 <p align="center"> <img width="484" height="139" alt="image" src="https://github.com/user-attachments/assets/45cff8fa-91a3-466c-9e13-0087313ee716" /> </p>
 
-• Console phía Server hiển thị:
+    • Console phía Server hiển thị:
 
 <p align="center"> <img width="615" height="260" alt="image" src="https://github.com/user-attachments/assets/67b3e0dc-930f-4542-a42d-8186527356c1" /> </p>
 
