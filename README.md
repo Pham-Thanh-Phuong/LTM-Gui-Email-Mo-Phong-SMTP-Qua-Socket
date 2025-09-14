@@ -158,12 +158,12 @@ Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo ch
 • Console phía Client hiển thị:
  
 <p align="center"> <img width="484" height="139" alt="image" src="https://github.com/user-attachments/assets/45cff8fa-91a3-466c-9e13-0087313ee716" /> </p>
-<p align="center"><i>Hình 1</i></p>
+<p align="center"><i>Hình ảnh 1</i></p>
 
 • Console phía Server hiển thị:
 
 <p align="center"> <img width="615" height="260" alt="image" src="https://github.com/user-attachments/assets/67b3e0dc-930f-4542-a42d-8186527356c1" /> </p>
-
+<p align="center"><i>Hình ảnh 2</i></p>
 3.2. Email được lưu trên Server
 
 Sau khi client gửi email thành công, Server sẽ tự động tạo thư mục mailbox/ (nếu chưa tồn tại) và lưu toàn bộ nội dung email thành file .txt.
@@ -171,11 +171,11 @@ Sau khi client gửi email thành công, Server sẽ tự động tạo thư m�
  • File được tạo:
  
  <p align="center"> <img width="240" height="148" alt="image" src="https://github.com/user-attachments/assets/80e5ce83-27a8-44dc-abf6-c58f8925d248" /> </p>
-
+<p align="center"><i>Hình ảnh 3</i></p>
  • Nội dung file email:
 
 <p align="center"> <img width="387" height="164" alt="image" src="https://github.com/user-attachments/assets/0ca875b3-42c7-4229-8351-7e1c41438110" /> </p>
-
+<p align="center"><i>Hình ảnh 4</i></p>
  3.3. Kiến trúc hệ thống
 
 Hệ thống được xây dựng theo kiến trúc Client–Server qua TCP Socket, cụ thể:
@@ -217,7 +217,7 @@ Hệ thống được xây dựng theo kiến trúc Client–Server qua TCP Sock
 Sau khi tạo project Java trong Eclipse, sắp xếp các file theo cấu trúc:
 
 <p align="center"> <img width="231" height="275" alt="image" src="https://github.com/user-attachments/assets/3f0075dd-6231-4601-b568-2e8f2e5e89a3" /> </p>
-
+<p align="center"><i>Hình ảnh 5</i></p>
 4.2. Chạy chương trình
 
 4.2.1. Chạy Server
@@ -229,7 +229,7 @@ Sau khi tạo project Java trong Eclipse, sắp xếp các file theo cấu trúc
  3. Console của Eclipse hiển thị thông báo:
 
 <p align="center"> <img width="455" height="59" alt="image" src="https://github.com/user-attachments/assets/1435de41-91fd-407e-91b5-7ab6effe72d2" /> </p>
-
+<p align="center"><i>Hình ảnh 6</i></p>
 4.2.2. Chạy Client
 
  1. Mở file SmtpClientUI.java trong Eclipse.
@@ -263,7 +263,7 @@ Khi người dùng bấm nút gửi, client sẽ:
  2. Mỗi email sẽ được lưu thành một file .txt với tên theo thời gian, ví dụ:
 
 <p align="center"> <img width="197" height="32" alt="image" src="https://github.com/user-attachments/assets/321c6abe-641d-426b-b984-b008b41b45b1" /> </p>
-
+<p align="center"><i>Hình ảnh 7</i></p>
 3. Nội dung file email bao gồm:
    
          • Người gửi
@@ -279,9 +279,7 @@ Khi người dùng bấm nút gửi, client sẽ:
 Ví dụ:
 
 <p align="center"> <img width="393" height="108" alt="image" src="https://github.com/user-attachments/assets/bdfdc47c-27ff-470a-8205-51154ec6ebda" /> </p>
-
-
-
+<p align="center"><i>Hình ảnh 8</i></p>
 
 ## 📞 5. Liên hệ
 - 💌 Email: thankfwong23@gmail.com  
