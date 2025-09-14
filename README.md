@@ -157,11 +157,11 @@ Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo ch
 
  • Console phía Client hiển thị:
  
-<img width="484" height="139" alt="image" src="https://github.com/user-attachments/assets/45cff8fa-91a3-466c-9e13-0087313ee716" />
+<p align="center"> <img width="484" height="139" alt="image" src="https://github.com/user-attachments/assets/45cff8fa-91a3-466c-9e13-0087313ee716" /> </p>
 
 • Console phía Server hiển thị:
 
-<img width="615" height="260" alt="image" src="https://github.com/user-attachments/assets/67b3e0dc-930f-4542-a42d-8186527356c1" />
+<p align="center"> <img width="615" height="260" alt="image" src="https://github.com/user-attachments/assets/67b3e0dc-930f-4542-a42d-8186527356c1" /> </p>
 
 3.2. Email được lưu trên Server
 
@@ -169,11 +169,11 @@ Sau khi client gửi email thành công, Server sẽ tự động tạo thư m�
 
  • File được tạo:
  
- <img width="240" height="148" alt="image" src="https://github.com/user-attachments/assets/80e5ce83-27a8-44dc-abf6-c58f8925d248" />
+ <p align="center"> <img width="240" height="148" alt="image" src="https://github.com/user-attachments/assets/80e5ce83-27a8-44dc-abf6-c58f8925d248" /> </p>
 
  • Nội dung file email:
 
- <img width="387" height="164" alt="image" src="https://github.com/user-attachments/assets/0ca875b3-42c7-4229-8351-7e1c41438110" />
+<p align="center"> <img width="387" height="164" alt="image" src="https://github.com/user-attachments/assets/0ca875b3-42c7-4229-8351-7e1c41438110" /> </p>
 
  3.3. Kiến trúc hệ thống
 
@@ -215,7 +215,7 @@ Trước khi chạy hệ thống, cần chuẩn bị:
     
 Sau khi tạo project Java trong Eclipse, sắp xếp các file theo cấu trúc:
 
-<img width="231" height="275" alt="image" src="https://github.com/user-attachments/assets/3f0075dd-6231-4601-b568-2e8f2e5e89a3" />
+<p align="center"> <img width="231" height="275" alt="image" src="https://github.com/user-attachments/assets/3f0075dd-6231-4601-b568-2e8f2e5e89a3" /> </p>
 
 4.2. Chạy chương trình
 
@@ -227,7 +227,7 @@ Sau khi tạo project Java trong Eclipse, sắp xếp các file theo cấu trúc
     
  3. Console của Eclipse hiển thị thông báo:
 
-<img width="455" height="59" alt="image" src="https://github.com/user-attachments/assets/1435de41-91fd-407e-91b5-7ab6effe72d2" />
+<p align="center"> <img width="455" height="59" alt="image" src="https://github.com/user-attachments/assets/1435de41-91fd-407e-91b5-7ab6effe72d2" /> </p>
 
 4.2.2. Chạy Client
 
@@ -261,7 +261,7 @@ Khi người dùng bấm nút gửi, client sẽ:
     
  2. Mỗi email sẽ được lưu thành một file .txt với tên theo thời gian, ví dụ:
 
-<img width="197" height="32" alt="image" src="https://github.com/user-attachments/assets/321c6abe-641d-426b-b984-b008b41b45b1" />
+<p align="center"> <img width="197" height="32" alt="image" src="https://github.com/user-attachments/assets/321c6abe-641d-426b-b984-b008b41b45b1" /> </p>
 
 3. Nội dung file email bao gồm:
    
