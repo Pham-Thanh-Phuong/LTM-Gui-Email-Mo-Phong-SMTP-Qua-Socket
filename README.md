@@ -158,6 +158,7 @@ Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo ch
 • Console phía Client hiển thị:
  
 <p align="center"> <img width="484" height="139" alt="image" src="https://github.com/user-attachments/assets/45cff8fa-91a3-466c-9e13-0087313ee716" /> </p>
+<p align="center"><i>Hình 1</i></p>
 
 • Console phía Server hiển thị:
 
