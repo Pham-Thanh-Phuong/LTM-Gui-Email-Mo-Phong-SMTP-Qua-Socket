@@ -187,7 +187,7 @@ Hệ thống được xây dựng theo kiến trúc Client–Server qua TCP Sock
 
 • Mailbox Saver: Chức năng lưu trữ email vào thư mục mailbox/ dưới dạng file văn bản .txt.
 
-📖 4. Các bước cài đặt
+## 📖 4. Các bước cài đặt
 
 Phần này mô tả các bước chuẩn bị, cài đặt môi trường và chạy thử hệ thống SMTP mô phỏng bằng Java. Toàn bộ các bước đều có thể thực hiện trên một máy tính cá nhân mà không cần Internet, vì chương trình chỉ chạy trong mạng cục bộ (localhost).
 
