@@ -30,7 +30,7 @@ Người dùng nhập thông tin email qua giao diện Swing, client gửi lện
 
 
 
-📌 2. Công nghệ sử dụng
+## 📌 2. Công nghệ sử dụng
 
 Trong quá trình xây dựng hệ thống mô phỏng gửi email qua giao thức SMTP bằng Socket, nhóm sử dụng các công nghệ chính sau:
 
