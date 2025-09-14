@@ -283,8 +283,8 @@ Ví dụ:
 
 
 ## 📞 5. Liên hệ
-- <img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/50589749-cd52-4a8e-bd46-02576731b6d4" /> Email: thankfwong23@gmail.com  
-- SĐT: 0383 609 685 
+- 📧 Email: thankfwong23@gmail.com  
+- 📞 SĐT: 0383 609 685 
 
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
