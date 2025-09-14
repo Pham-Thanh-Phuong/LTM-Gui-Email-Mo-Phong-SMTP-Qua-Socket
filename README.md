@@ -102,10 +102,10 @@ Trong ứng dụng mạng, dữ liệu trao đổi đều ở dạng chuỗi ký
 Trong hệ thống SMTP mô phỏng, I/O đóng vai trò quan trọng để:
 
  1. Gửi lệnh từ client đến server.
- 2. 
- 3. Nhận phản hồi từ server.
- 4. 
- 5. Lưu email thành file trong thư mục mailbox/.
+    
+ 2. Nhận phản hồi từ server.
+    
+ 3. Lưu email thành file trong thư mục mailbox/.
 
 ⸻
 
@@ -144,6 +144,25 @@ Lợi ích của việc dùng IDE:
  • Hỗ trợ chạy và debug nhanh.
  
  • Tích hợp console để quan sát log giao tiếp Client – Server.
+
+ ## 📖 3. Các hình ảnh chức năng
+
+Trong phần này, hệ thống được minh họa bằng các hình ảnh chụp từ quá trình chạy chương trình. Các hình này giúp làm rõ cách thức giao tiếp giữa SMTP Client và SMTP Server, cũng như kết quả lưu trữ email trên server.
+
+⸻
+
+3.1. Giao tiếp Client ↔ Server (Console log)
+
+Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo chuẩn SMTP đến Server thông qua kết nối TCP Socket. Đồng thời, Server sẽ phản hồi bằng các mã trạng thái.
+
+ • Console phía Client hiển thị:
+ 
+<img width="484" height="139" alt="image" src="https://github.com/user-attachments/assets/45cff8fa-91a3-466c-9e13-0087313ee716" />
+
+• Console phía Server hiển thị:
+
+<img width="615" height="260" alt="image" src="https://github.com/user-attachments/assets/67b3e0dc-930f-4542-a42d-8186527356c1" />
+
 
 ## 📞 5. Liên hệ
 - Email: thankfwong23@gmail.com  
