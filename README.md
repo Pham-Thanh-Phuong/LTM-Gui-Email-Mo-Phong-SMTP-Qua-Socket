@@ -283,7 +283,7 @@ Ví dụ:
 
 
 ## 📞 5. Liên hệ
-- 📧 Email: thankfwong23@gmail.com  
+- 💌 Email: thankfwong23@gmail.com  
 - ☎️ SĐT: 0383 609 685 
 
 
