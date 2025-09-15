@@ -22,7 +22,7 @@
 
 ## 📖 1. Giới thiệu
 
-- Đề tài: Mô phỏng gửi email qua SMTP bằng Socket 
+- Đề tài: Gửi email mô phỏng qua SMTP bằng Socket 
 - Hệ thống mô phỏng quá trình gửi email qua giao thức SMTP (Simple Mail Transfer Protocol)
 - Người dùng nhập thông tin email qua giao diện Swing, client gửi lệnh SMTP qua TCP socket đến server, server sẽ lưu email thành file .txt trong thư mục mailbox/.
 
@@ -174,6 +174,8 @@ Trong phần này, hệ thống được minh họa bằng các hình ảnh ch�
 
 <p align="center"> <img width="387" height="164" alt="image" src="https://github.com/user-attachments/assets/0ca875b3-42c7-4229-8351-7e1c41438110" /> </p>
 <p align="center"><i>Hình ảnh 4</i></p>
+
+ • Giao diện email:
 <p align="center"> <img width="488" height="444" alt="image" src="https://github.com/user-attachments/assets/5bebf9c6-92e4-43d2-90ba-e56099a23964" /> </p>
 <p align="center"><i>Hình ảnh 5</i></p>
 
