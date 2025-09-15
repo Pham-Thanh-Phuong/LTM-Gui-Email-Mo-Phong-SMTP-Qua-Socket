@@ -174,6 +174,9 @@ Trong phần này, hệ thống được minh họa bằng các hình ảnh ch�
 
 <p align="center"> <img width="387" height="164" alt="image" src="https://github.com/user-attachments/assets/0ca875b3-42c7-4229-8351-7e1c41438110" /> </p>
 <p align="center"><i>Hình ảnh 4</i></p>
+<p align="center"> <img width="488" height="444" alt="image" src="https://github.com/user-attachments/assets/5bebf9c6-92e4-43d2-90ba-e56099a23964" /> </p>
+<p align="center"><i>Hình ảnh 5</i></p>
+
  3.3. Kiến trúc hệ thống
 
 Hệ thống được xây dựng theo kiến trúc Client–Server qua TCP Socket, cụ thể:
@@ -215,7 +218,7 @@ Hệ thống được xây dựng theo kiến trúc Client–Server qua TCP Sock
 - Sau khi tạo project Java trong Eclipse, sắp xếp các file theo cấu trúc:
 
 <p align="center"> <img width="231" height="275" alt="image" src="https://github.com/user-attachments/assets/3f0075dd-6231-4601-b568-2e8f2e5e89a3" /> </p>
-<p align="center"><i>Hình ảnh 5</i></p>
+<p align="center"><i>Hình ảnh 6</i></p>
 4.2. Chạy chương trình
 
 4.2.1. Chạy Server
@@ -227,7 +230,7 @@ Hệ thống được xây dựng theo kiến trúc Client–Server qua TCP Sock
  3. Console của Eclipse hiển thị thông báo:
 
 <p align="center"> <img width="455" height="59" alt="image" src="https://github.com/user-attachments/assets/1435de41-91fd-407e-91b5-7ab6effe72d2" /> </p>
-<p align="center"><i>Hình ảnh 6</i></p>
+<p align="center"><i>Hình ảnh 7</i></p>
 4.2.2. Chạy Client
 
  1. Mở file SmtpClientUI.java trong Eclipse.
@@ -261,7 +264,7 @@ Khi người dùng bấm nút gửi, client sẽ:
  2. Mỗi email sẽ được lưu thành một file .txt với tên theo thời gian, ví dụ:
 
 <p align="center"> <img width="197" height="32" alt="image" src="https://github.com/user-attachments/assets/321c6abe-641d-426b-b984-b008b41b45b1" /> </p>
-<p align="center"><i>Hình ảnh 7</i></p>
+<p align="center"><i>Hình ảnh 8</i></p>
 3. Nội dung file email bao gồm:
    
          • Người gửi
@@ -277,7 +280,7 @@ Khi người dùng bấm nút gửi, client sẽ:
 Ví dụ:
 
 <p align="center"> <img width="393" height="108" alt="image" src="https://github.com/user-attachments/assets/bdfdc47c-27ff-470a-8205-51154ec6ebda" /> </p>
-<p align="center"><i>Hình ảnh 8</i></p>
+<p align="center"><i>Hình ảnh 9</i></p>
 
 ## 📞 5. Liên hệ
 - 💌 Email: thankfwong23@gmail.com  
