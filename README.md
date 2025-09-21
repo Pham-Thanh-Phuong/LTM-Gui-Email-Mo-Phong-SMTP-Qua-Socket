@@ -32,10 +32,9 @@ Hệ thống được phát triển bằng **Java (Swing)** và sử dụng **SQ
 - 📑 **Thư đã gửi (Sent)**: Hiển thị các email mà người dùng đã gửi đi.  
 - 💾 **Lưu trữ email**: Mọi email sẽ được lưu trong **SQLite Database** và trên Server dưới dạng file `.txt`.  
 
-Ứng dụng giúp sinh viên hiểu rõ hơn về:
+Ứng dụng giúp hiểu rõ hơn về:
 - Cách thức **Client ↔ Server** giao tiếp qua **TCP Socket**.  
 - Nguyên lý hoạt động cơ bản của **SMTP (Simple Mail Transfer Protocol)**.  
-- Kết hợp **lập trình mạng** và **lập trình giao diện** trong Java.  
 
 ## 📌 2. Công nghệ sử dụng
 
