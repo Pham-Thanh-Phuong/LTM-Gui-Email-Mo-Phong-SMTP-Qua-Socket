@@ -21,12 +21,21 @@
 
 
 ## 📖 1. Giới thiệu
+Đề tài xây dựng một **ứng dụng gửi và nhận email mô phỏng giao thức SMTP** thông qua **TCP Socket**.  
+Hệ thống được phát triển bằng **Java (Swing)** và sử dụng **SQLite** để quản lý dữ liệu người dùng cũng như email.  
 
-- Đề tài: Gửi email mô phỏng qua SMTP bằng Socket 
-- Hệ thống mô phỏng quá trình gửi email qua giao thức SMTP (Simple Mail Transfer Protocol)
-- Người dùng nhập thông tin email qua giao diện Swing, client gửi lệnh SMTP qua TCP socket đến server, server sẽ lưu email thành file .txt trong thư mục mailbox/.
+Ứng dụng bao gồm các chức năng chính:
 
+- 🔑 **Đăng ký / Đăng nhập**: Người dùng có thể tạo tài khoản và đăng nhập hệ thống.  
+- ✉️ **Gửi thư**: Gửi email đến người dùng khác thông qua cơ chế Socket mô phỏng SMTP.  
+- 📥 **Hộp thư đến (Inbox)**: Hiển thị danh sách email đã nhận.  
+- 📑 **Thư đã gửi (Sent)**: Hiển thị các email mà người dùng đã gửi đi.  
+- 💾 **Lưu trữ email**: Mọi email sẽ được lưu trong **SQLite Database** và trên Server dưới dạng file `.txt`.  
 
+Ứng dụng giúp sinh viên hiểu rõ hơn về:
+- Cách thức **Client ↔ Server** giao tiếp qua **TCP Socket**.  
+- Nguyên lý hoạt động cơ bản của **SMTP (Simple Mail Transfer Protocol)**.  
+- Kết hợp **lập trình mạng** và **lập trình giao diện** trong Java.  
 
 ## 📌 2. Công nghệ sử dụng
 
@@ -34,33 +43,11 @@
 
 ⸻
 
-2.1. Ngôn ngữ lập trình Java
+### 2.1. Ngôn ngữ lập trình Java <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java Logo" width="50" height="50" />
 
-    Java là một ngôn ngữ lập trình hướng đối tượng, đa nền tảng, được phát triển bởi Sun Microsystems (nay thuộc Oracle). Java nổi bật nhờ nguyên lý “Write Once, Run Anywhere”, tức là chương trình viết một lần có thể chạy trên nhiều hệ điều hành khác nhau nhờ Java Virtual Machine (JVM).
-
-Trong đề tài này, Java được lựa chọn vì:
-
-     • Hỗ trợ mạnh mẽ các thư viện Socket, cho phép lập trình mạng dễ dàng.
-     
-     • Có API I/O (Input/Output) phong phú để đọc/ghi dữ liệu từ client và server.
-     
-     • Cộng đồng lớn, nhiều tài liệu tham khảo.
-     
-     • Khả năng chạy ổn định trên nhiều hệ điều hành (Windows, Linux, macOS).
-
-Java giúp việc xây dựng mô hình Client – Server trở nên trực quan, dễ hiểu, đồng thời đảm bảo chương trình có thể tái sử dụng và mở rộng.
-
-⸻
-
-2.2. Socket trong Java
+### 2.2. Socket trong Java
 
 Socket là điểm cuối (endpoint) trong quá trình giao tiếp giữa hai tiến trình qua mạng. Trong Java, gói java.net cung cấp các lớp quan trọng:
-
-     • ServerSocket: Dùng để tạo máy chủ, lắng nghe yêu cầu từ client.
-     
-     • Socket: Dùng để tạo kết nối từ phía client đến server.
-     
-     • Các phương thức đọc/ghi (InputStream, OutputStream) cho phép trao đổi dữ liệu qua kết nối.
 
 Trong hệ thống này:
 
@@ -70,44 +57,7 @@ Trong hệ thống này:
      
      • Server phản hồi bằng các mã trạng thái (220, 250, 354, 221…) như một máy chủ SMTP thực tế.
 
-Việc sử dụng TCP Socket đảm bảo:
-
-     • Kết nối tin cậy: Dữ liệu gửi đi không bị mất hoặc sai thứ tự.
-     
-     • Giao tiếp hai chiều: Client có thể gửi lệnh, server phản hồi ngay lập tức.
-     
-     • Đồng bộ hóa: Thích hợp cho mô phỏng giao thức SMTP vốn cần phản hồi tuần tự.
-
-
-2.3. Java I/O (Input/Output)
-
-Trong ứng dụng mạng, dữ liệu trao đổi đều ở dạng chuỗi ký tự. Java cung cấp hệ thống I/O Streams mạnh mẽ để xử lý:
-
-     • InputStreamReader + BufferedReader: đọc dữ liệu từ client.
-     
-     • OutputStreamWriter + BufferedWriter: gửi dữ liệu từ server đến client.
-     
-     • FileWriter + BufferedWriter: ghi nội dung email xuống file .txt.
-
-Ưu điểm khi dùng I/O trong Java:
-
-     • Dễ dàng thao tác với dữ liệu dạng text.
-     
-     • Hỗ trợ buffer (bộ đệm), giúp tăng tốc độ xử lý.
-     
-     • Có thể kết hợp nhiều lớp I/O để đạt hiệu suất và tính linh hoạt. 
-     
-Trong hệ thống SMTP mô phỏng, I/O đóng vai trò quan trọng để:
-
-     1. Gửi lệnh từ client đến server.
-        
-     2. Nhận phản hồi từ server.
-        
-     3. Lưu email thành file trong thư mục mailbox/.
-
-⸻
-
-2.4. Mô hình Client – Server
+### 2.3. Mô hình Client – Server
 
 Mô hình Client – Server là kiến trúc phổ biến trong lập trình mạng.
 
@@ -127,162 +77,143 @@ Việc sử dụng mô hình Client – Server giúp hệ thống dễ dàng mô
 
 ⸻
 
-2.5. IDE: Eclipse / IntelliJ IDEA
-
-Để lập trình và chạy ứng dụng, nhóm sử dụng IDE (Integrated Development Environment):
-
-     • Eclipse: miễn phí, phổ biến trong cộng đồng Java.
-     
-     • IntelliJ IDEA: giao diện hiện đại, hỗ trợ tính năng thông minh (code completion, debug).
-
-Lợi ích của việc dùng IDE:
-
-     • Quản lý project dễ dàng.
-     
-     • Hỗ trợ chạy và debug nhanh.
-     
-     • Tích hợp console để quan sát log giao tiếp Client – Server.
-
  ## 💻 3. Các hình ảnh chức năng
 
 Trong phần này, hệ thống được minh họa bằng các hình ảnh chụp từ quá trình chạy chương trình. Các hình này giúp làm rõ cách thức giao tiếp giữa SMTP Client và SMTP Server, cũng như kết quả lưu trữ email trên server.
 
 ⸻
 
-3.1. Giao tiếp Client ↔ Server (Console log)
+### 3.1. Giao tiếp Client ↔ Server (Console log)
+- Khi client bấm **Gửi**, chương trình client (GUI) sẽ mở socket tới `localhost:2525` và gửi các lệnh SMTP dạng văn bản. Server phản hồi bằng các mã trạng thái SMTP (220/250/354/221...).
 
-- Khi chương trình được chạy, phía Client sẽ gửi các lệnh theo chuẩn SMTP đến Server thông qua kết nối TCP Socket. Đồng thời, Server sẽ phản hồi bằng các mã trạng thái.
+**Luồng mẫu (Client → Server)**:
+```
+S  220 SMTP Server Ready
+C  HELO localhost
+S  250 Hello
+C  MAIL FROM:<alice>
+S  250 OK
+C  RCPT TO:<bob>
+S  250 OK
+C  SUBJECT: Test subject
+S  250 OK
+C  DATA
+S  354 End data with <CR><LF>.<CR><LF>
+C  [nội dung thư dòng 1]
+C  [nội dung thư dòng 2]
+C  .
+S  250 Message accepted
+C  QUIT
+S  221 Bye
+```
 
-• Console phía Client hiển thị:
- 
-<p align="center"> <img width="484" height="139" alt="image" src="https://github.com/user-attachments/assets/45cff8fa-91a3-466c-9e13-0087313ee716" /> </p>
+- **Console phía Client**: in các lệnh đã gửi và phản hồi nhận được.  
+- **Console phía Server**: in các lệnh nhận được từ client và khi lưu email thành công sẽ in log (ví dụ “Message accepted” hoặc thông báo SQL thành công).
+
+### 3.2. Email được lưu trong Database (`email_app.db`)
+- Mã nguồn hiện tại **lưu email trực tiếp vào bảng `emails`** của SQLite (không lưu file `.txt` trong thư mục mailbox). Bảng `emails` có cấu trúc chính như sau (được tạo tự động khi ứng dụng khởi động):
+
+```sql
+CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE,
+  password TEXT
+);
+
+CREATE TABLE IF NOT EXISTS emails (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  sender TEXT,
+  receiver TEXT,
+  subject TEXT,
+  content TEXT,
+  time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+<p align="center"> <img width="863" height="465" alt="image" src="https://github.com/user-attachments/assets/e788e15a-f70d-4535-ae2e-338e7b8081fd" /> </p>
 <p align="center"><i>Hình ảnh 1</i></p>
 
-• Console phía Server hiển thị:
-
-<p align="center"> <img width="615" height="260" alt="image" src="https://github.com/user-attachments/assets/67b3e0dc-930f-4542-a42d-8186527356c1" /> </p>
+### 3.3. Giao diện & các chức năng liên quan
+- Cấu trúc thư mục:
+  
+<p align="center"> <img width="239" height="310" alt="image" src="https://github.com/user-attachments/assets/0b68a056-e014-4e1d-8843-d48a6041d4dd" /> </p>
 <p align="center"><i>Hình ảnh 2</i></p>
-3.2. Email được lưu trên Server
+- Giao diện đăng ký:
 
-- Sau khi client gửi email thành công, Server sẽ tự động tạo thư mục mailbox/ (nếu chưa tồn tại) và lưu toàn bộ nội dung email thành file .txt.
-
- • File được tạo:
- 
- <p align="center"> <img width="240" height="148" alt="image" src="https://github.com/user-attachments/assets/80e5ce83-27a8-44dc-abf6-c58f8925d248" /> </p>
+<p align="center"> <img width="387" height="244" alt="image" src="https://github.com/user-attachments/assets/e302f46f-fe40-45dc-8dcd-f6c50a1161e5" /> </p>
 <p align="center"><i>Hình ảnh 3</i></p>
- • Nội dung file email:
+- Giao diện đăng nhập:
 
-<p align="center"> <img width="387" height="164" alt="image" src="https://github.com/user-attachments/assets/0ca875b3-42c7-4229-8351-7e1c41438110" /> </p>
+<p align="center"> <img width="385" height="292" alt="image" src="https://github.com/user-attachments/assets/ec6b96fa-b02c-4f13-bd59-e8a4b0eb6f31" /> </p>
 <p align="center"><i>Hình ảnh 4</i></p>
+- Giao diện gửi thư:
 
- • Giao diện email:
-<p align="center"> <img width="488" height="444" alt="image" src="https://github.com/user-attachments/assets/5bebf9c6-92e4-43d2-90ba-e56099a23964" /> </p>
+<p align="center"> <img width="791" height="596" alt="image" src="https://github.com/user-attachments/assets/9af6b2f2-463f-417b-aa06-4b6a5ac76b9c" /> </p>
 <p align="center"><i>Hình ảnh 5</i></p>
+- Giao diện hộp thư đến:
 
- 3.3. Kiến trúc hệ thống
+<p align="center"> <img width="786" height="590" alt="image" src="https://github.com/user-attachments/assets/a984cc6f-2a6d-45a3-a60e-cc461b9a10af" /> </p>
+<p align="center"><i>Hình ảnh 6</i></p>
+- Giao diện thư đã gửi:
 
-Hệ thống được xây dựng theo kiến trúc Client–Server qua TCP Socket, cụ thể:
-
-    [SMTP Client] <--TCP Socket--> [SMTP Server] --> [Mailbox Saver -> File .txt]
-    
-    • SMTP Client: Ứng dụng Java có giao diện, cho phép nhập người nhận và nội dung email.
-    
-    • SMTP Server: Chạy nền, lắng nghe trên cổng 2525, xử lý lệnh từ client.
-    
-    • Mailbox Saver: Chức năng lưu trữ email vào thư mục mailbox/ dưới dạng file văn bản .txt.
+<p align="center"> <img width="783" height="590" alt="image" src="https://github.com/user-attachments/assets/84b5f484-eb96-4a90-bcac-4bd05ec9fafd" /> </p>
+<p align="center"><i>Hình ảnh 7</i></p>
 
 ## ⚙️ 4. Các bước cài đặt
 
-    Phần này mô tả các bước chuẩn bị, cài đặt môi trường và chạy thử hệ thống SMTP mô phỏng bằng Java. Toàn bộ các bước đều có thể thực hiện trên một máy tính cá nhân mà không cần Internet, vì chương trình chỉ chạy trong mạng cục bộ (localhost).
+    Phần này mô tả các bước chuẩn bị, cài đặt môi trường và chạy thử hệ thống SMTP mô phỏng bằng Java. 
 
 ⸻
 
-4.1. Chuẩn bị môi trường
+### 4.1. Chuẩn bị
+1. **Cài JDK** (JDK 8+) và kiểm tra:
+   ```bash
+   java -version
+   ```
 
-    Trước khi chạy hệ thống, cần chuẩn bị:
-    
-1. Cài đặt JDK (Java Development Kit)
-        
-     • Phiên bản khuyến nghị: JDK 8 trở lên
-     
-     • Kiểm tra bằng lệnh:
+2. **IDE**: Eclipse.
 
-        java -version
+3. **Thêm thư viện SQLite JDBC** :  
+   - Nếu project chưa có `sqlite-jdbc` trên classpath, tải `sqlite-jdbc-*.jar`  và add vào Build Path trong Eclipse.  
+   - (Trong trường hợp đã gửi sẵn `.class` thì chạy trực tiếp cũng OK nếu runtime có JDBC driver; nhưng tốt nhất để có thể mở DB từ mã nguồn, thêm jar này).
 
-2. Cài đặt IDE để lập trình và chạy chương trình
-   
-         • Có thể sử dụng Eclipse IDE, IntelliJ IDEA hoặc NetBeans.
-         
-         • Trong đề tài này, IDE phổ biến nhất là Eclipse.
- 
-3. Cấu trúc thư mục project
-    
-- Sau khi tạo project Java trong Eclipse, sắp xếp các file theo cấu trúc:
+4. **Kiểm tra cấu trúc file**: trong thư mục project cần có:
+```
+/src/ (source files hoặc package .class)
+App.class, LoginForm.class, RegisterForm.class, MainForm.class, Database.class, SMTPServer.class, SMTPClient.class, ...
+email_app.db    <-- sẽ được tạo khi chạy lần đầu (nếu chưa có)
+```
 
-<p align="center"> <img width="231" height="275" alt="image" src="https://github.com/user-attachments/assets/3f0075dd-6231-4601-b568-2e8f2e5e89a3" /> </p>
-<p align="center"><i>Hình ảnh 6</i></p>
-4.2. Chạy chương trình
+### 4.2. Khởi động hệ thống (thứ tự chạy)
 
-4.2.1. Chạy Server
+#### 4.2.1. Chạy SMTP Server
+1. Mở class `SMTPServer` (package `BaiTapLon123`).  
+2. Run → **Run As → Java Application**.  
+3. Console sẽ in (ví dụ):
+```
+SMTP Server đang chạy trên cổng 2525
+```
+> Lưu ý: Server phải chạy trước khi client cố gắng kết nối, nếu không client sẽ gặp `Connection refused`.
 
- 1. Mở file SmtpServer.java trong Eclipse.
-    
- 2. Chọn Run As → Java Application.
-    
- 3. Console của Eclipse hiển thị thông báo:
+#### 4.2.2. Chạy Client (GUI)
+1. Mở `App` (hoặc `LoginForm` nếu chạy trực tiếp).  
+2. Run → **Run As → Java Application**.  
+3. Trên giao diện: Đăng ký tài khoản (Register) → Đăng nhập (Login) → vào tab Soạn thư.  
+4. Nhập **Người nhận**, **Chủ đề**, **Nội dung** → bấm **Gửi**. Client sẽ:
+   - Gọi SQL `INSERT INTO emails(...)` để lưu email (client-side lưu trước).  
+   - Mở socket tới server `localhost:2525`, gửi lệnh SMTP (HELO, MAIL FROM, RCPT TO, SUBJECT, DATA, content, `.`), nhận phản hồi, rồi đóng kết nối.
 
-<p align="center"> <img width="455" height="59" alt="image" src="https://github.com/user-attachments/assets/1435de41-91fd-407e-91b5-7ab6effe72d2" /> </p>
-<p align="center"><i>Hình ảnh 7</i></p>
-4.2.2. Chạy Client
+#### 4.2.3. Kiểm tra kết quả
+- Mở `email_app.db` bằng **DB Browser for SQLite** (hoặc chạy `ViewDB` test class) để xem các bản ghi trong bảng `emails`.  
+- Bạn có thể thấy các trường: `sender`, `receiver`, `subject`, `content`, `time`.
+- Console server sẽ in log các lệnh client gửi và thông báo khi email được insert thành công.
 
- 1. Mở file SmtpClientUI.java trong Eclipse.
-    
- 2. Chọn Run As → Java Application.
-    
- 3. Giao diện ứng dụng hiển thị cửa sổ với:
-    
-         • Ô nhập người nhận.
-         
-         • Ô nhập nội dung email.
- 
- • Nút ✉ Gửi Email.
+### 4.3. Các lỗi thường gặp & cách xử lý nhanh
+- **Connection refused**: Server chưa chạy → chạy `SMTPServer` trước.  
+- **No such table: emails**: Database chưa được tạo hoặc class `Database` không được gọi trước khi insert → chạy App (Database static initializer sẽ tạo bảng). Có thể xóa file `email_app.db` và khởi động lại để tạo lại bảng mới.  
+- **Tài khoản rỗng / đăng ký lỗi**: Đảm bảo `RegisterForm` không cho phép username hoặc password rỗng; kiểm tra bảng `users` có bản ghi rỗng không. 
+- **Không thấy email trong Inbox**: Kiểm tra xem gửi tới đúng `receiver` (trùng chính xác username trong bảng `users`).
 
-Khi người dùng bấm nút gửi, client sẽ:
-
-     • Tạo kết nối TCP đến server (cổng 2525).
-     
-     • Gửi lệnh SMTP: HELO, MAIL FROM, RCPT TO, DATA.
-     
-     • Gửi nội dung email.
-     
-     • Kết thúc bằng dấu "." theo chuẩn SMTP.
-     
-     • Đóng kết nối bằng lệnh QUIT.
-
-4.2.3. Kiểm tra kết quả
-
- 1. Sau khi email được gửi thành công, server sẽ tự động tạo thư mục mailbox/ (nếu chưa có).
-    
- 2. Mỗi email sẽ được lưu thành một file .txt với tên theo thời gian, ví dụ:
-
-<p align="center"> <img width="197" height="32" alt="image" src="https://github.com/user-attachments/assets/321c6abe-641d-426b-b984-b008b41b45b1" /> </p>
-<p align="center"><i>Hình ảnh 8</i></p>
-3. Nội dung file email bao gồm:
-   
-         • Người gửi
-         
-         • Người nhận
-         
-         • Chủ đề
-         
-         • Thời gian
-         
-         • Nội dung email
-
-Ví dụ:
-
-<p align="center"> <img width="393" height="108" alt="image" src="https://github.com/user-attachments/assets/bdfdc47c-27ff-470a-8205-51154ec6ebda" /> </p>
-<p align="center"><i>Hình ảnh 9</i></p>
+---
 
 ## 📞 5. Liên hệ
 - 💌 Email: thankfwong23@gmail.com  
