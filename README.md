@@ -82,34 +82,47 @@ Trong phần này, hệ thống được minh họa bằng các hình ảnh ch�
 
 ⸻
 
-### 3.1. Giao tiếp Client ↔ Server (Console log)
+### 3.1. Giao diện & các chức năng liên quan
+- Cấu trúc thư mục:
+  
+<p align="center"> <img width="239" height="310" alt="image" src="https://github.com/user-attachments/assets/0b68a056-e014-4e1d-8843-d48a6041d4dd" /> </p>
+<p align="center"><i>Hình ảnh 1</i></p>
+- Giao diện đăng ký:
+
+<p align="center"> <img width="387" height="244" alt="image" src="https://github.com/user-attachments/assets/e302f46f-fe40-45dc-8dcd-f6c50a1161e5" /> </p>
+<p align="center"><i>Hình ảnh 2</i></p>
+- Giao diện đăng nhập:
+
+<p align="center"> <img width="385" height="292" alt="image" src="https://github.com/user-attachments/assets/ec6b96fa-b02c-4f13-bd59-e8a4b0eb6f31" /> </p>
+<p align="center"><i>Hình ảnh 3</i></p>
+- Giao diện gửi thư 📨:
+
+<p align="center"> <img width="885" height="593" alt="image" src="https://github.com/user-attachments/assets/215bf021-bdfa-4381-ae81-e001dd87a634" /> </p>
+<p align="center"><i>Hình ảnh 4</i></p>
+- Giao diện hộp thư đến 📥:
+
+<p align="center"> <img width="883" height="595" alt="image" src="https://github.com/user-attachments/assets/b9d06d6c-dabf-4d3f-a425-cc5a1184117c" /> </p>
+<p align="center"><i>Hình ảnh 5</i></p>
+- Giao diện thư đã gửi 📤:
+
+<p align="center"> <img width="883" height="592" alt="image" src="https://github.com/user-attachments/assets/fef4b032-fb1a-4e79-904b-e6b7f3906833" /> </p>
+<p align="center"><i>Hình ảnh 6</i></p>
+- Giao diện xem chi tiết thư gửi đến 📑:
+
+<p align="center"> <img width="882" height="593" alt="image" src="https://github.com/user-attachments/assets/86e34798-4578-4c82-b2f6-6e92e9befc3e" /> </p>
+<p align="center"><i>Hình ảnh 7</i></p>
+
+### 3.2. Giao tiếp Client ↔ Server (Console log)
 - Khi client bấm **Gửi**, chương trình client (GUI) sẽ mở socket tới `localhost:2525` và gửi các lệnh SMTP dạng văn bản. Server phản hồi bằng các mã trạng thái SMTP (220/250/354/221...).
 
 **Luồng mẫu (Client → Server)**:
-```
-S  220 SMTP Server Ready
-C  HELO localhost
-S  250 Hello
-C  MAIL FROM:<alice>
-S  250 OK
-C  RCPT TO:<bob>
-S  250 OK
-C  SUBJECT: Test subject
-S  250 OK
-C  DATA
-S  354 End data with <CR><LF>.<CR><LF>
-C  [nội dung thư dòng 1]
-C  [nội dung thư dòng 2]
-C  .
-S  250 Message accepted
-C  QUIT
-S  221 Bye
-```
+<p align="center"> <img width="1077" height="322" alt="image" src="https://github.com/user-attachments/assets/e8eb590a-41c6-425c-84f9-effe94680571" /></p>
+<p align="center"><i>Hình ảnh 8</i></p>
 
 - **Console phía Client**: in các lệnh đã gửi và phản hồi nhận được.  
 - **Console phía Server**: in các lệnh nhận được từ client và khi lưu email thành công sẽ in log (ví dụ “Message accepted” hoặc thông báo SQL thành công).
 
-### 3.2. Email được lưu trong Database (`email_app.db`)
+### 3.3. Email được lưu trong Database (`email_app.db`)
 - Mã nguồn hiện tại **lưu email trực tiếp vào bảng `emails`** của SQLite (không lưu file `.txt` trong thư mục mailbox). Bảng `emails` có cấu trúc chính như sau (được tạo tự động khi ứng dụng khởi động):
 
 ```sql
@@ -129,33 +142,7 @@ CREATE TABLE IF NOT EXISTS emails (
 );
 ```
 <p align="center"> <img width="863" height="465" alt="image" src="https://github.com/user-attachments/assets/e788e15a-f70d-4535-ae2e-338e7b8081fd" /> </p>
-<p align="center"><i>Hình ảnh 1</i></p>
-
-### 3.3. Giao diện & các chức năng liên quan
-- Cấu trúc thư mục:
-  
-<p align="center"> <img width="239" height="310" alt="image" src="https://github.com/user-attachments/assets/0b68a056-e014-4e1d-8843-d48a6041d4dd" /> </p>
-<p align="center"><i>Hình ảnh 2</i></p>
-- Giao diện đăng ký:
-
-<p align="center"> <img width="387" height="244" alt="image" src="https://github.com/user-attachments/assets/e302f46f-fe40-45dc-8dcd-f6c50a1161e5" /> </p>
-<p align="center"><i>Hình ảnh 3</i></p>
-- Giao diện đăng nhập:
-
-<p align="center"> <img width="385" height="292" alt="image" src="https://github.com/user-attachments/assets/ec6b96fa-b02c-4f13-bd59-e8a4b0eb6f31" /> </p>
-<p align="center"><i>Hình ảnh 4</i></p>
-- Giao diện gửi thư:
-
-<p align="center"> <img width="791" height="596" alt="image" src="https://github.com/user-attachments/assets/9af6b2f2-463f-417b-aa06-4b6a5ac76b9c" /> </p>
-<p align="center"><i>Hình ảnh 5</i></p>
-- Giao diện hộp thư đến:
-
-<p align="center"> <img width="786" height="590" alt="image" src="https://github.com/user-attachments/assets/a984cc6f-2a6d-45a3-a60e-cc461b9a10af" /> </p>
-<p align="center"><i>Hình ảnh 6</i></p>
-- Giao diện thư đã gửi:
-
-<p align="center"> <img width="783" height="590" alt="image" src="https://github.com/user-attachments/assets/84b5f484-eb96-4a90-bcac-4bd05ec9fafd" /> </p>
-<p align="center"><i>Hình ảnh 7</i></p>
+<p align="center"><i>Hình ảnh 9</i></p>
 
 ## ⚙️ 4. Các bước cài đặt
 
